@@ -1,0 +1,27 @@
+{
+    "LevelId": 1,
+    "Playfield": [
+        {
+            "CardFace": 2,
+            "CardSuit": 1,
+            "Position": {"x": 300, "y": 1200}
+        },
+        {
+            "CardFace": 1,
+            "CardSuit": 3,
+            "Position": {"x": 650, "y": 1000}
+        }
+    ],
+    "Stack": [
+        {
+            "CardFace": 3,
+            "CardSuit": 0,
+            "Position": {"x": 0, "y": 0}
+        },
+        {
+            "CardFace": 0,
+            "CardSuit": 2,
+            "Position": {"x": 0, "y": 0}
+        }
+    ]
+}
