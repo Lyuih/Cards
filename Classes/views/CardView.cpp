@@ -115,6 +115,11 @@ bool CardView::onTouchBegan(Touch* touch, Event* event)
         return false;
     }
 
+    // 覆盖状态的牌不参与点击（需消除上方牌后才能翻开操作）
+    if (_cardModel && !_cardModel->isFaceUp()) {
+        return false;
+    }
+
     if (_clickCallback) {
         _clickCallback(_cardId);
     }

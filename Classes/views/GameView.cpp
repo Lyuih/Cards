@@ -2,6 +2,11 @@
 
 USING_NS_CC;
 
+static const Color4B kPlayfieldColor(30, 100, 50, 255);    // 主牌区深绿色
+static const Color4B kStackAreaColor(20, 75, 40, 255);     // 堆牌区稍深绿色
+static const float kPlayfieldHeight = 1500.0f;
+static const float kStackAreaHeight = 580.0f;
+
 GameView* GameView::create()
 {
     auto view = new GameView();
@@ -24,6 +29,20 @@ bool GameView::init()
 
 void GameView::setupLayout(const std::vector<DeckLayoutInfo>& deckInfos)
 {
+    auto winSize = Director::getInstance()->getWinSize();
+
+    // 主牌区背景
+    auto playfieldBg = LayerColor::create(kPlayfieldColor,
+                                           winSize.width, kPlayfieldHeight);
+    playfieldBg->setPosition(0, kStackAreaHeight);
+    this->addChild(playfieldBg, -1);
+
+    // 堆牌区背景
+    auto stackBg = LayerColor::create(kStackAreaColor,
+                                       winSize.width, kStackAreaHeight);
+    stackBg->setPosition(0, 0);
+    this->addChild(stackBg, -1);
+
     _deckViews.clear();
     for (const auto& info : deckInfos) {
         auto deckView = CardDeckView::create(info);
