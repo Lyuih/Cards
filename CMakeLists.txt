@@ -50,10 +50,47 @@ endif()
 list(APPEND GAME_SOURCE
      Classes/AppDelegate.cpp
      Classes/HelloWorldScene.cpp
+    Classes/models/CardModel.cpp
+    Classes/models/CardDeckModel.cpp
+    Classes/models/GameModel.cpp
+    Classes/models/UndoModel.cpp
+    Classes/configs/models/CardResConfig.cpp
+    Classes/configs/loaders/LevelConfigLoader.cpp
+    Classes/services/GameModelGenerator.cpp
+    Classes/services/MoveValidator.cpp
+    Classes/managers/UndoManager.cpp
+    Classes/managers/SaveManager.cpp
+    Classes/views/CardView.cpp
+    Classes/views/CardDeckView.cpp
+    Classes/views/GameView.cpp
+    Classes/views/HUDView.cpp
+    Classes/controllers/CardController.cpp
+    Classes/controllers/GameController.cpp
+    Classes/controllers/HUDController.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
      Classes/HelloWorldScene.h
+    Classes/models/CardModel.h
+    Classes/models/CardDeckModel.h
+    Classes/models/GameModel.h
+    Classes/models/UndoAction.h
+    Classes/models/UndoModel.h
+    Classes/configs/models/LevelConfig.h
+    Classes/configs/models/CardResConfig.h
+    Classes/configs/loaders/LevelConfigLoader.h
+    Classes/services/GameModelGenerator.h
+    Classes/services/MoveValidator.h
+    Classes/managers/UndoManager.h
+    Classes/managers/SaveManager.h
+    Classes/views/CardView.h
+    Classes/views/CardDeckView.h
+    Classes/views/DeckLayoutInfo.h
+    Classes/views/GameView.h
+    Classes/views/HUDView.h
+    Classes/controllers/CardController.h
+    Classes/controllers/GameController.h
+    Classes/controllers/HUDController.h
      )
 
 if(ANDROID)
