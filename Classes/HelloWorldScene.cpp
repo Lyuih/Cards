@@ -46,6 +46,9 @@ bool HelloWorld::init()
         return false;
     }
 
+    auto background = LayerColor::create(Color4B(34, 120, 50, 255));  
+    this->addChild(background);
+
     _gameController = GameController::create();
     if (_gameController) {
         _gameController->retain();
